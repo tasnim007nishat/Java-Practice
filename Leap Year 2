@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class leapYear2 {
+	
+	public static void leapYear(int year) {
+		if(year%4==0) {
+			System.out.println(year + " is Leap Year");
+		} else if(year%100==0) { //if year is century 
+			if (year%400==0) { // if year is century and it is leap year
+				System.out.println(year + " is Leap Year");
+			} else {
+				System.out.println(year + " is not Leap Year");
+			}
+		} else {
+			System.out.println(year + " is not Leap Year");
+		}
+	}
+	
+	private static Scanner sc;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int year;
+		sc = new Scanner(System.in);
+		
+		System.out.println("Please enter the year: ");
+		year = sc.nextInt();
+		
+		leapYear(year);
+		
+		for (int i = 1; i<3; i++) {
+			System.out.println("Please enter the " + i + " year: ");
+			year = sc.nextInt();
+			leapYear(year);
+		}
+		
+		//leapYear(1999);
+		//leapYear(2024);
+
+	}
+
+}
