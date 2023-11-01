@@ -1,0 +1,29 @@
+public class Fibonacci {
+	
+	public static void myFibonacci(int count) {
+		System.out.println("This is my Fibonacci Series.");
+		//int[] fib = 10;
+		int i;
+		int i1=0, i2=1;
+		int nextNum= i1+i2;
+		System.out.print(i1+" "+i2);
+		//System.out.println(i2);
+		
+		for(i=2;i<=count;++i) {
+			System.out.print(" "+nextNum);
+			i1=i2;
+			i2=nextNum;
+			nextNum=i1+i2;
+					
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myFibonacci(5);
+		//System.out.println();
+
+	}
+
+}
